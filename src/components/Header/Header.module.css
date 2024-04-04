@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: center; /* Center the title on mobile screens */
+  justify-content:  space-between; /* Center the title on mobile screens */
   align-items: center;
   padding: 1rem;
   background: transparent; /* Updated to make header transparent */
