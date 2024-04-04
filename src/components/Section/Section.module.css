@@ -1,0 +1,63 @@
+/* Section.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1.6s ease-in-out;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.isVisible {
+  opacity: 1;
+}
+
+.title {
+  font-family: "Lato";
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: block;
+  color: black;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust the shadow */
+}
+
+/* Gradient text styles */
+.imagination,
+.reality,
+.builtBy,
+.forYour {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.imagination {
+  background-image: linear-gradient(to right, rgba(79, 56, 223, 1) 50%, rgba(246, 0, 237, 1) 50%);
+}
+
+.reality {
+  background-image: linear-gradient(to right, rgba(79, 56, 223, 1) 0%, rgba(246, 0, 237, 1) 100%);
+}
+
+.builtBy {
+  background-image: linear-gradient(to right, rgba(29, 50, 239, 1) 0%, rgba(236, 26, 240, 1) 100%);
+}
+
+.forYour {
+  background-image: linear-gradient(to right, rgba(29, 50, 239, 1) 0%, rgba(236, 26, 240, 1) 100%);
+}
+
+/* Responsive typography for smaller devices */
+@media (max-width: 767px) {
+  .title {
+    font-size: 2.5rem; /* Adjust the font size for smaller screens */
+  }
+}
+

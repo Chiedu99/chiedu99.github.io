@@ -1,0 +1,35 @@
+.carousel {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .slide, .centerSlide {
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  
+  .centerSlide .image {
+    /* Adjust the transition to match the carousel's speed */
+    transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
+    transform: scale(1.05) rotateY(20deg) rotateX(10deg);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .image {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    /* Base state transition should be quick to not interfere with the carousel's motion */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+
+/* Updated CSS */
+.centerSlide .image {
+    animation: liftAndLower 2.35s ease-out forwards; /* Matches the autoplaySpeed for synchronization */
+  }
+  
+  @keyframes liftAndLower {
+    0%, 100% { transform: scale(1) rotateY(0deg) rotateX(0deg); }
+    85% { transform: scale(1.05) rotateY(10deg) rotateX(5deg); }
+  }
+  

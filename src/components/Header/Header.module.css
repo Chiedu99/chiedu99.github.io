@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  justify-content: center; /* Center the title on mobile screens */
+  align-items: center;
+  padding: 1rem;
+  background: transparent; /* Updated to make header transparent */
+  box-shadow: none; /* Remove shadow to prevent line appearance */
+}
+
+.title {
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem; /* Smaller font size for mobile */
+}
+
+/* Media query for tablets and larger screens */
+@media (min-width: 768px) {
+  .header {
+      justify-content: space-between; /* Put title on the left and nav on the right */
+      padding: 1rem 2rem; /* Increase padding */
+  }
+
+  .title {
+      font-size: 1.5rem; /* Increase font size for larger screens */
+  }
+}
+
+.navToggle {
+  display: none; /* by default the toggle is not displayed */
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Media query for tablets and larger screens */
+@media (min-width: 768px) {
+  .navToggle {
+      display: none;
+  }
+
+  .nav {
+      display: block;
+  }
+}
+
+/* Smaller screens */
+@media (max-width: 767px) {
+  .navToggle {
+      display: inline;
+  }
+
+  .nav {
+      display: none;
+  }
+}
